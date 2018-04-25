@@ -1,6 +1,8 @@
-# test-project
+# Vuex-Orm Example
 
-> A Vue.js project
+> A Vue.js project demonstrating the use of state management with relationships between store objects
+- Using Bootstrapo Vue for UI [https://bootstrap-vue.js.org/](https://bootstrap-vue.js.org/)
+- State Manegement with [vuex](https://vuex.vuejs.org/en/intro.html) and [vuex-orm](https://vuex-orm.github.io/vuex-orm/)
 
 ## Build Setup
 
@@ -25,3 +27,4 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
