@@ -1,18 +1,19 @@
 <template>
-<div  class="main">
+<div  class="container">
   <h2>
   Lessons
   </h2>
   <div class="lesson-input">
     <b-form-input type="text" v-model="lessonName"/>
-      <b-button @click="addLesson()">ADD LESSON</b-button>
-    </div>
+    <div style="padding-top: 10px"/>
+    <b-button @click="addLesson()">ADD LESSON</b-button>
+  </div>
 
-      <b-table show-empty
-             stacked="md"
-             :items="lessons"
-             :fields="fields"
-    >
+    <b-table show-empty
+      stacked="md"
+      :items="lessons"
+      :fields="fields">
+
     <template slot="assignments" slot-scope="row">{{row.value.length}}</template>
           <template slot="actions" slot-scope="row">
         <!-- We use @click.stop here to prevent a 'row-clicked' event from also happening -->

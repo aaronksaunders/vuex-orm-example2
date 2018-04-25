@@ -1,12 +1,15 @@
 <template>
-  <div >
-    <div class="lesson-input">
+  <div class="container">
+    <h2>
+  Assignments
+  </h2>
+    <div class="assignment-input">
       <b-form-input type="text" v-model="assignment.name" placeholder="assignment name"/><br/>
       <b-form-input type="text" v-model="assignment.question" placeholder="assignment question"/><br/>
       <b-button @click="addAssignment()">ADD ASSIGNMENT</b-button>
     </div>
     <div v-for="a in assignments" :key="a.id"  class="assignment">
-      <b-button @click="removeAssignment(a)">DEL</b-button>
+      <b-button size="sm" @click="removeAssignment(a)">DEL</b-button>
       {{a.name}} : <span class="assignment-question">{{a.question}}</span>
     </div>
   </div>
@@ -68,5 +71,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.assignment-input {
+  margin-bottom: 20px;
+}
+.assignment-entry {
+  margin-bottom: 10px;
+}
+.assignment-question {
+  font-style: italic;
+}
 </style>
